@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
  def suggestions
   #llamar el método que cree de shapes
     @shape = get_shape(params[:shoulder], params[:waist], params[:hips])
-    shape_id =  Shape.where(:name => @shape).first.id
+    shape =  Shape.where(:name => @shape)
+    shape_id = shape.first.id
     @products = Product.where(:shape_id => shape_id)
 
   end
