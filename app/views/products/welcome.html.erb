@@ -2,3 +2,13 @@
 
 <h1>Main Page</h1>
 
+<%= form_tag("/calculate", method: "get") do %>
+  <%= label_tag(:shoulder, "Shoulder:") %> 
+  <%= text_field_tag(:shoulder) %>
+ <%= label_tag(:waist, "Waist:") %>
+  <%= text_field_tag(:waist) %>
+   <%= label_tag(:hips, "Hips:") %>
+  <%= text_field_tag(:hips) %>
+
+  <%= submit_tag("Calculate") %>
+<% end %>

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  include ProductsHelper 
   # GET /products
   # GET /products.json
   def index
@@ -20,6 +20,15 @@ class ProductsController < ApplicationController
   def welcome
     @product = Product.new
   end
+
+ def suggestions
+  #llamar el método que cree de shapes
+    @shape = get_shape(params[:shoulder], params[:waist], params[:hips])
+    shape_id =  Shape.where(:name => @shape).first.id
+    @products = Product.where(:shape_id => shape_id)
+
+  end
+
 
   # GET /products/1/edit
   def edit
@@ -73,6 +82,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :color, :price)
+      params.require(:product).permit(:name, :description, :color, :price, :shape_id)
     end
 end
