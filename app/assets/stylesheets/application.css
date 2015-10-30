@@ -30,9 +30,15 @@ a {
     text-decoration: none !important;
 }
 
+.frame {
+	margin: 0 auto;
+    padding: 0;
+    text-align: center;
+	width: 1345px;
+}
+
 #header {
 	height: 200px;
-	background-image: 
 }
 
 .row {
