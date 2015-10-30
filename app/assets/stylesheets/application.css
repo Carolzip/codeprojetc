@@ -12,4 +12,97 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+
+p, ol, ul, td {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+	color: #000 !important;
+    text-decoration: none !important;
+}
+
+#header {
+	height: 200px;
+	background-image: 
+}
+
+.row {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100em;
+}
+
+.logo img {
+	width: 161px;
+}
+
+#nav {
+	float: left;
+}
+
+#nav ul {
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+
+#nav ul li {
+	display: inline-block;
+	padding: 50px 40px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+}
+
+.social {
+	padding-top: 45px;
+}
+
+.social ul {
+	list-style: none;
+	float: left;
+    position: absolute;
+    padding-left: 0;
+}
+
+.social ul li {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.social ul li img {
+	height: 25px;
+}
+
+#subnav {
+	margin-top: 40px;
+}
+
+#subnav ul {
+	list-style: none;
+	margin-left: 30px;
+    padding: 0;
+}
+
+#subnav ul li {
+	display: inline-block;
+}
+
+#subnav ul li a img {
+	width: 30px;
+	margin-left: 10px;
+}
