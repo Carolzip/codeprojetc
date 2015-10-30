@@ -30,15 +30,14 @@ a {
     text-decoration: none !important;
 }
 
-.frame {
+.wrapper {
 	margin: 0 auto;
     padding: 0;
     text-align: center;
-	width: 1345px;
 }
 
 #header {
-	height: 200px;
+	height: 160px;
 }
 
 .row {
@@ -47,15 +46,17 @@ a {
     margin-right: auto !important;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 100em;
+    max-width: 92em;
 }
 
 .logo img {
 	width: 161px;
+	margin-top: 20px;
 }
 
 #nav {
 	float: left;
+	margin-top: 20px;
 }
 
 #nav ul {
@@ -75,7 +76,7 @@ a {
 }
 
 .social {
-	padding-top: 45px;
+	padding-top: 65px;
 }
 
 .social ul {
@@ -95,7 +96,7 @@ a {
 }
 
 #subnav {
-	margin-top: 40px;
+	margin-top: 60px;
 }
 
 #subnav ul {
@@ -111,4 +112,8 @@ a {
 #subnav ul li a img {
 	width: 30px;
 	margin-left: 10px;
+}
+
+.item {
+	margin-top: 50px;
 }
