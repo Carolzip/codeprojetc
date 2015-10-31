@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
-
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading">Products</div></div>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -10,6 +11,7 @@
       <th>Color</th>
       <th>Price</th>
       <th>Shape</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +23,8 @@
         <td><%= product.description %></td>
         <td><%= product.color %></td>
         <td><%= product.price %></td>
-        <td><%= product.shape_id %></td>
+        <td><%= !product.shape.nil? ? product.shape.name : "No Shape" %></td>
+        <td><%= image_tag product.avatar.url(:thumb) %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,7 +32,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, :class => "btn btn-info" %>

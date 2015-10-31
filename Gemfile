@@ -14,6 +14,8 @@ gem 'pg', group: :production
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 
+# Image Upload
+gem "paperclip", "~> 4.3"
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 

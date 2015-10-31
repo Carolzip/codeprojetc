@@ -18,15 +18,18 @@ class ProductsController < ApplicationController
   end
 
   def welcome
+    @products = Product.limit(4).order("RANDOM()")
     @product = Product.new
   end
 
  def suggestions
   #llamar el método que cree de shapes
     @shape = get_shape(params[:shoulder], params[:waist], params[:hips])
-    shape =  Shape.where(:name => @shape)
-    shape_id = shape.first.id
+    shape_object =  Shape.where(:name => @shape)
+    shape_id = shape_object.first.id
     @products = Product.where(:shape_id => shape_id)
+    @shape_avatar = shape_object.first.avatar
+    @shape_description = shape_object.first.description
 
   end
 
@@ -83,6 +86,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :color, :price, :shape_id)
+      params.require(:product).permit(:name, :description, :color, :price, :shape_id, :avatar)
     end
 end
