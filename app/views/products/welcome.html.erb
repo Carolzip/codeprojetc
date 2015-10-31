@@ -61,35 +61,122 @@
 
 	</div>
 
-	<div id="home-slider">
-	   	<%= image_tag "banner-principal.jpg" %>
+	<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "find.jpg", :class => "first-slide" %>
+        </div>
+        <div class="item">
+          <%= image_tag "winter-2015.jpg", :class => "second-slide" %>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+	<div class="products">
+		<div class="row">      
+			<% @products.each do |product| %>
+		        <div class="col-xs-6 col-sm-4">
+		        	<div class="items">
+				        <div class="item-image"><%= image_tag product.avatar.url %></div>
+						<div class="item-name"><%=product.name%></div>
+						<div clas="price-wish">
+							<div class="item-price"><%=number_to_currency(product.price)%></div>
+							<div class="item-wish"><%= image_tag "heart.png" %> Add to Wishlist</div>
+						</div>
+						<div class="item-add">ADD TO BAG</div>
+					</div>
+			    </div>
+	        <%end%>
+		</div>
+	</div>
+
+	<div class="calculator">
+		<div class="calc-title">
+			<%= image_tag "calc-title.png" %>
+		</div>
+
+		<div class="row">
+
+	        <div class="col-xs-6 col-md-4">
+	        	<div class="calc-image">
+	        		<%= image_tag "woman.jpg" %>
+	        	</div>
+	        </div>
+
+	        <div class="col-xs-6 col-md-4">
+	        	<div class="calc-text">
+	        		<ul>
+		        		<li>Do not be afraid of your measurements.</li>
+		        		</br>
+						<li>Stand correctly. Stand up straight, and breathe normally when taking measurements.</li>
+						</br>
+						<li>Use the correct type of tape measure. When taking body measurements, you need to use the correct type of tape measure. You will want to use a soft cloth or flexible plastic/rubber tape measure. Do not use a metal measuring tape such as is used in construction (it will be inaccurate).</li>
+						</br>
+						<li>You need to take your circumference measurements (measurement around) of your shoulders, waist, and hips.</li>
+					</ul>
+	        	</div>
+	        </div>
+
+	        <div class="col-xs-6 col-md-4">
+			    <div class="calc">
+					<%= form_tag("/calculate", method: "get") do %>
+					<div class="calc-measures">
+						<%= label_tag(:shoulder, "Shoulders (cm) ") %> 
+						<%= text_field_tag(:shoulder) %>
+						<p>Place the measuring tape across your shoulders and measure around the largest part of your chest. Be sure to keep the tape parallel to the floor.</p>
+					</div>
+					<div class="calc-measures">
+						<%= label_tag(:waist, "Waist (cm) ") %>
+						<%= text_field_tag(:waist) %>
+						<p>Place the measuring tape about a 1 cm above your bellybutton (at the narrowest part of your waist) to measure around your torso. When measuring your waist, exhale and measure before inhaling again.</p>
+					</div>
+					<div class="calc-measures">
+						<%= label_tag(:hips, "Hips (cm) ") %>
+						<%= text_field_tag(:hips) %>
+						<p>Place the measuring tape across the widest part of your hips/buttocks and measure all the way around while keeping the tape parallel to the floor.</p>
+					</div>
+					<div class="calc-btn">
+						<%= submit_tag("Find out your Silhouette!") %>
+					<% end %>
+					</div>
+				</div>
+	        </div>
+		</div>
+
 	</div>
 
 	<div class="products">
 		<div class="row">      
 			<% @products.each do |product| %>
-        <div class="col-xs-5 col-sm-3">
-        <div class="item">
-        <%= image_tag product.avatar.url(:thumb)%>
-			<div><%=product.name%></div>
-			<div><%=number_to_currency(product.price)%> + wishlist</div>
-			<div>add to bag</div>
-        </div>
-        </div>
-        <%end%>
+		        <div class="col-xs-6 col-sm-4">
+		        	<div class="items">
+				        <div class="item-image"><%= image_tag product.avatar.url %></div>
+						<div class="item-name"><%=product.name%></div>
+						<div clas="price-wish">
+							<div class="item-price"><%=number_to_currency(product.price)%></div>
+							<div class="item-wish"><%= image_tag "heart.png" %> Add to Wishlist</div>
+						</div>
+						<div class="item-add">ADD TO BAG</div>
+					</div>
+			    </div>
+	        <%end%>
 		</div>
 	</div>
 
 </div>
 
-<h1>Calculator</h1>
-
-<%= form_tag("/calculate", method: "get") do %>
-  <%= label_tag(:shoulder, "Shoulder:") %> 
-  <%= text_field_tag(:shoulder) %>
- <%= label_tag(:waist, "Waist:") %>
-  <%= text_field_tag(:waist) %>
-   <%= label_tag(:hips, "Hips:") %>
-  <%= text_field_tag(:hips) %>
-<%= submit_tag("Find out your shape!") %>
-<% end %>
