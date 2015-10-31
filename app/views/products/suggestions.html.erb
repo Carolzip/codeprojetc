@@ -1,9 +1,9 @@
+<%if  !@shape.nil? %>
+  <h1>Your Silhouette is <%= @shape %></h1> 
+  <%= image_tag @shape_avatar.url(:thumb)%>
+  <%= @shape_description%>
 
-<h1>Your Silhouette is <%= @shape %></h1> 
-<%= image_tag @shape_avatar.url(:thumb)%>
-<%= @shape_description%>
-
-<div class="products">
+    <div class="products">
     <div class="row">
       
           <% @products.each do |product| %>
@@ -17,3 +17,6 @@
           </div>
         </div>
           <%end%>
+<% else %>
+<h1> We can not identify your body shape </h1>
+<%end%>
