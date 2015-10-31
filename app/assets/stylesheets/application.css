@@ -36,7 +36,7 @@ a {
 }
 
 #header {
-	height: 160px;
+	height: 130px;
 }
 
 .row {
@@ -49,13 +49,14 @@ a {
 }
 
 .logo img {
-	width: 161px;
+	width: 220px;
 	margin-top: 20px;
 }
 
 #nav {
 	float: left;
 	margin-top: 20px;
+	margin-left: 50px;
 }
 
 #nav ul {
@@ -66,16 +67,16 @@ a {
 
 #nav ul li {
 	display: inline-block;
-	padding: 50px 40px 0 0;
+	padding: 30px 25px 0 0;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 15px;
     color: #000;
 }
 
 .social {
-	padding-top: 65px;
+	padding-top: 45px;
 }
 
 .social ul {
@@ -95,7 +96,7 @@ a {
 }
 
 #subnav {
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
 #subnav ul {
