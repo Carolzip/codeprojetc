@@ -1,5 +1,8 @@
 
-<h1>Your Silhouette is <%= @shape %></h1>
+<h1>Your Silhouette is <%= @shape %></h1> 
+<%= image_tag @shape_avatar.url(:thumb)%>
+<%= @shape_description%>
+
 <div class="products">
     <div class="row">
       
