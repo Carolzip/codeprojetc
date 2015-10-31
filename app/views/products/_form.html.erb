@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :shape_id %><br>
-    <%= collection_select(:item, :shape_id, Shape.all, :id, :name) %>
+    <%= collection_select(:product, :shape_id, Shape.all, :id, :name,{ :prompt => 'Select a State/Province' }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
