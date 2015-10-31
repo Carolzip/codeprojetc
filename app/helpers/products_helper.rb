@@ -22,7 +22,7 @@ elsif (c>1)
 	
 else 
 	
-	shape= "We can not identify your body shape"
+	shape= nil
 
 end
 puts shape
