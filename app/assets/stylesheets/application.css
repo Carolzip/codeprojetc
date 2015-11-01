@@ -155,7 +155,7 @@ a {
     background-color: #680148;
     color: #fff;
     font-weight: 600;
-    padding: 12px;
+    padding: 15px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -216,12 +216,12 @@ a {
 
 .calc-text {
 	color: #fff;
-    padding-top: 100px;
+    padding-top: 110px;
 }
 
 .calc-text ul li {
 	text-align: inherit;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 100;
     line-height: 1.6;
     list-style: none;
@@ -234,7 +234,7 @@ a {
 .calc-btn input {
 	background-color: #680148;
     border: none;
-    padding: 10px;
+    padding: 15px;
     width: 320px;
 }
 
@@ -265,3 +265,114 @@ a {
 	height: 300px;
 	margin-top: 50px;
 }
+
+.tips button {
+	background-color: #680148;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 15px;
+    font-weight: 200;
+    padding: 13px 30px;
+    margin: 14px 5px 0 50px;
+    cursor: pointer;
+}
+
+.items-res {
+	margin-top: 50px;
+	width: 250px;
+}
+
+.item-image-res {
+	width: 100%;
+	padding: 0 10px;
+}
+
+.item-image-res img {
+	width: 100%;
+}
+
+.item-name-res {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 5px 5px 10px;
+    text-align: left;
+}
+
+.item-price-res {
+	font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-weight: 800;
+    font-size: 18px;
+    float: left;
+    margin-left: 10px;
+}
+
+.item-add-res {
+	margin: 30px 10px 0 10px;
+    background-color: #680148;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    width: 230px;
+    text-align: center;
+}
+
+.item-desc {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding: 0 10px 5px 10px;
+    text-align: left;
+}
+
+.row-res {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100em;
+    height: 970px;
+}
+
+.row-res p {
+	text-align: center;
+    font-size: 60px;
+    font-style: normal;
+    margin-top: 60px;
+    color: #680148;
+    font-family: 'Allura', cursive !important;
+}
+
+.wrapper-res {
+	margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.shape-res {
+	height: 300px;
+    margin-top: 50px;
+}
+
+.shape-desc {
+	height: 40px;
+    margin-top: 30px;
+    font-size: 18px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.calc-btn-res {
+	background-color: #680148;
+    border: none;
+    padding: 15px;
+    width: 320px;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+.calc-btn-res a {
+	color: #fff !important;
+}
+

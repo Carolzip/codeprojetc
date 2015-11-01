@@ -1,25 +1,105 @@
-<%if  !@shape.nil? %>
-  <h1>Your Silhouette is <%= @shape %></h1> 
-  <%= image_tag @shape_avatar.url(:thumb)%>
-  <%= @shape_description%>
-
-    <div class="products">
+<div id="header">
     <div class="row">
-      
-          <% @products.each do |product| %>
-        <div class="col-xs-5 col-sm-3">
-        <div class="item">
-        <%= image_tag product.avatar.url(:thumb)%>
-          <div><%=product.name%></div>
-          <div><%=product.description%></div>
-          <div><%=number_to_currency(product.price)%> + wishlist</div>
-          <div>add to bag</div>
-          </div>
-        </div>
-          <%end%>
-<% else %>
-<h1> We can not identify your body Silhouette </h1>
-<div class="calc-btn">
-            <%= link_to("Try it again!", :root) %>
+          <div class="col-xs-3 col-sm-2">
+            <div class="logo">
+              <%= image_tag "silhouette_logo.png" %>
             </div>
-<%end%>
+          </div>
+
+          <div class="col-xs-9 col-sm-6">
+            <nav id="nav">
+              <ul id="main-menu">
+                <li><a href="#">Coats</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Trousers</a></li>
+              </ul>
+            </nav>          
+          </div>
+
+          <div class="col-xs-3 col-sm-2">
+            <div class="social">
+              <ul>
+                <li>
+              <%= link_to image_tag('facebook.png'), "https://facebook.com", target: '_blank' %>
+            </li>
+                <li>
+                  <%= link_to image_tag('instagram.png'), "https://instagram.com", target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to image_tag('pinterest.png'), "https://pinterest.com", target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to image_tag('youtube.png'), "https://youtube.com", target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to image_tag('twitter.png'), "https://twitter.com", target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to image_tag('gplus.png'), "https://plus.google.com", target: '_blank' %>
+                </li>           
+            </div>
+            
+          </div>
+
+          <div class="col-xs-3 col-sm-2">
+            <nav id="subnav">
+              <ul>
+                <li><a href="#">LOGIN |</a></li>
+                <li><a href="#">SIGN UP</a></li>
+                <li><%= link_to image_tag('bag.png'), "#" %></li>
+              </ul>
+            </nav>          
+          </div>
+      </div>
+</div>
+
+
+<div class="wrapper-res">      
+  <div class="row-res">
+
+      <div>
+        <%if  !@shape.nil? %>
+        <p>Your Silhouette is <%= @shape %></p> 
+      </div>
+      <div>
+        <div class="shape-res">
+          <%= image_tag @shape_avatar.url(:medium)%>
+        </div>
+        <div class="shape-desc">
+          <%= @shape_description%>
+        </div>
+      </div>
+            
+    <% @products.each do |product| %>
+
+    <div class="col-xs-6 col-sm-3">  
+      <div class="items-res">
+        <div class="item-image-res"><%= image_tag product.avatar.url%></div>
+        <div class="item-name-res"><%=product.name%></div>
+        <div class="item-desc"><%=product.description%></div>
+        <div class="item-price-res"><%=number_to_currency(product.price)%></div>
+        <div class="item-add-res">ADD TO BAG</div>
+      </div>
+    </div>  
+    
+    <%end%>
+
+    <% else %>
+      <h1> We can not identify your body Silhouette </h1>
+      <div class="calc-btn-res">
+      <%= link_to("Try it again!", :root) %>
+      </div>
+    <%end%>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-store">
+
+
+  </div>
+</footer>

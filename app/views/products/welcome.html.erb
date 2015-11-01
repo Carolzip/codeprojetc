@@ -126,13 +126,9 @@
 	        		<ul>
 		        		<li>Let us help you to understand your body silhouette and get the confidence to stand out, finding clothes to accentuate your best features!</li>
 					</ul>
-					<script>
-						sweetAlert({
-							title: "Oops!", 
-						    text: "Something went wrong on the page!", 
-						    type: "error"
-						});
-  					</script>
+					<div class="tips">
+						<button>Measurement Tips</button>
+					</div>
 	        	</div>
 	        </div>
 
@@ -186,12 +182,20 @@
 
 	<footer>
 		<div class="footer-store">
+			<div class="col-xs-6 col-sm-4">
 
-
+			</div>
 		</div>
 	</footer>
 
 </div>
+
+
+<script>
+	$('.tips button').on('click', function() {
+		swal('Measurements Tips', 'Stand correctly. Stand up straight, and breathe normally when taking measurements. You need to take your circumference measurements (measurement around) of your shoulders, waist, and hips.');
+  	});
+</script>
 
 
 
