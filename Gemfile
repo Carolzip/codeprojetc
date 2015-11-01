@@ -18,7 +18,7 @@ gem 'sqlite3', group: :development
 gem "paperclip", "~> 4.3"
 
 #Amazon
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
