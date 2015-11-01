@@ -163,7 +163,7 @@ a {
 
 /* Carousel base class */
 .carousel {
-  height: 690px;
+  height: 560px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -172,7 +172,7 @@ a {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 690px;
+  height: 560px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -180,8 +180,10 @@ a {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 690px;
+  height: 560px;
 }
+
+/*END OF CUSTOMIZE CAROUSEL*/
 
 .calculator {
 	background-color: #7ac4c5;
@@ -214,12 +216,12 @@ a {
 
 .calc-text {
 	color: #fff;
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .calc-text ul li {
-	text-align: right;
-    font-size: 17px;
+	text-align: inherit;
+    font-size: 33px;
     font-weight: 100;
     line-height: 1.6;
     list-style: none;
@@ -246,8 +248,20 @@ a {
     height: 30px;
  }
 
- .calc-measures p {
+.calc-measures p {
  	font-size: 13px;
  	line-height: 1.3;
  	text-align: left;
+ 	margin-top: 5px;
  }
+
+ .calc-measures label {
+ 	float: left;
+ }
+
+ .footer-store{
+	background-color: #000;
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+}

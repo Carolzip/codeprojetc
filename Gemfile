@@ -17,6 +17,9 @@ gem 'sqlite3', group: :development
 # Image Upload
 gem "paperclip", "~> 4.3"
 
+#Amazon
+gem 'aws-sdk'
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Use SCSS for stylesheets
