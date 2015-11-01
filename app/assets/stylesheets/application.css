@@ -356,7 +356,7 @@ a {
 }
 
 .shape-desc {
-	height: 40px;
+	height: 100px;
     margin-top: 30px;
     font-size: 18px;
     padding-right: 200px;
@@ -375,4 +375,127 @@ a {
 .calc-btn-res a {
 	color: #fff !important;
 }
+
+.logo-foot img {
+	width: 200px;
+    margin-top: 40px;
+    float: left;
+}
+
+.contact {
+	float: left;
+}
+
+.contact ul {
+	padding-left: 0;
+	margin-top: 40px;
+}
+
+.contact ul li {
+	font-size: 15px;
+    color: #a4a4a4;
+    list-style: none;
+    text-align: left;
+    line-height: 40px;
+}
+
+
+.menu-foot {
+	float: left;
+}
+
+.menu-foot ul {
+	padding-left: 0;
+	margin-top: 50px;
+}
+
+.menu-foot ul li {
+	font-size: 15px;
+    color: #a4a4a4;
+    list-style: none;
+    text-align: left;
+    line-height: 35px;
+}
+
+
+.terms {
+	float: left;
+}
+
+.terms ul {
+	padding-left: 0;
+	margin-top: 50px;
+}
+
+.terms ul li {
+	font-size: 15px;
+    color: #a4a4a4;
+    list-style: none;
+    text-align: left;
+    line-height: 35px;
+}
+
+.news {
+	float: left;
+}
+
+.news ul {
+	padding-left: 0;
+	margin-top: 50px;
+}
+
+.news ul li {
+	font-size: 15px;
+    color: #a4a4a4;
+    list-style: none;
+    text-align: left;
+    line-height: 35px;
+}
+
+.news
+
+.news-box {
+	border: solid 1px #a4a4a4;
+    height: 40px;
+    width: 275px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #a4a4a4;
+}
+
+.credit-cards img {
+	width: 270px;
+    margin-top: 30px;
+}
+
+.social-foot ul {
+	list-style: none;
+	float: left;
+    position: absolute;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.social-foot ul li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.social-foot ul li img {
+	height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
