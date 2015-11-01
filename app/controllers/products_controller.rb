@@ -18,8 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def welcome
-    @products = Product.limit(3).order("RANDOM()")
-    @products2 = Product.limit(3).order("RANDOM()")
+    @products = Product.limit(6).order("RANDOM()")
     @product = Product.new
   end
 
